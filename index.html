@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Locations</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+	
+  </head>
+  <body>
+	<h2>All Geo4All participating organizations</h2>
+    <div id="mapid" style="width: 100%; height: 400px;"></div>
+    <script type = "text/javascript">
+		var geojson = [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.250296,52.831497 ]
+    },
+    "properties": {
+    "FIELD1":1,
+    "Laboratory name and institution":"University of Nottingham",
+    "City":"Nottingham",
+    "Country":"UK",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-1.250296, 52.831497",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Stuart Marsh",
+    "Contact emails":"Stuart dot Marsh at nottingham.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.837305,41.967426 ]
+    },
+    "properties": {
+    "FIELD1":2,
+    "Laboratory name and institution":"University of Girona",
+    "City":"Girona",
+    "Country":"Spain",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"2.837305, 41.967426",
+    "Application received / Announced":"2012-09-10",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Lluís Vicens",
+    "Contact emails":"lluis at sigte.udg.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.396873,50.936974 ]
+    },
+    "properties": {
+    "FIELD1":3,
+    "Laboratory name and institution":"University of Southampton",
+    "City":"Southampton",
+    "Country":"UK",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-1.396873, 50.936974",
+    "Application received / Announced":"2013-04-30",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Jason Sadler",
+    "Contact emails":"osgl at geodata.soton.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.390363,50.10183 ]
+    },
+    "properties": {
+    "FIELD1":4,
+    "Laboratory name and institution":"Czech Technical University in Prague",
+    "City":"Prague",
+    "Country":"Czech Republic",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"14.390363, 50.10183",
+    "Application received / Announced":"2012-11-23",
+    "Notes (projects, collaborations, etc)":"Geospatial analysis, modeling and visualization, remote sensing, GRASS GIS and QGIS development",
+    "Contact names":"Martin Landa",
+    "Contact emails":"martin.landa at fsv.cvut.cz"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.611536,54.980656 ]
+    },
+    "properties": {
+    "FIELD1":5,
+    "Laboratory name and institution":"Open Source Geospatial Lab Newcastle University",
+    "City":"Newcastle",
+    "Country":"UK",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-1.611536, 54.980656",
+    "Application received / Announced":"2013-01-17",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dr David Fairbairn",
+    "Contact emails":"david.fairbairn@newcastle.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.095939,45.803516 ]
+    },
+    "properties": {
+    "FIELD1":6,
+    "Laboratory name and institution":"Politecnico di Milano - Polo Territoriale di Como",
+    "City":"Como",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"9.095939, 45.803516",
+    "Application received / Announced":"2013-02-25",
+    "Notes (projects, collaborations, etc)":"Geospatial analysis and geovisualization, Geo Big Data, VGI and citizen science",
+    "Contact names":"Prof. Maria Antonia Brovelli",
+    "Contact emails":"maria.brovelli@polimi.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.56273,52.380531 ]
+    },
+    "properties": {
+    "FIELD1":7,
+    "Laboratory name and institution":"University of Warwick",
+    "City":"Warwick",
+    "Country":"UK",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-1.56273, 52.380531",
+    "Application received / Announced":"2013-03-23",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Nataliya Tkachenko",
+    "Contact emails":"geolab at warwick.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.039473,52.198849 ]
+    },
+    "properties": {
+    "FIELD1":8,
+    "Laboratory name and institution":"UNEP/GRID Warsaw Centre",
+    "City":"Warsaw",
+    "Country":"Poland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"21.039473, 52.198849",
+    "Application received / Announced":"2013-03-18",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Ela Wołoszyńska-Wiśniewska",
+    "Contact emails":"ela at gridw.pl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.961098,46.028362 ]
+    },
+    "properties": {
+    "FIELD1":9,
+    "Laboratory name and institution":"University of Applied Sciences and Arts of Southern Switzerland (SUPSI)",
+    "City":"Lugano",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.961098, 46.028362",
+    "Application received / Announced":"2013-09-03",
+    "Notes (projects, collaborations, etc)":"Institute of Earth Sciences",
+    "Contact names":"Massimiliano Cannata",
+    "Contact emails":"geomatica at supsi.ch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.5481,47.3764 ]
+    },
+    "properties": {
+    "FIELD1":10,
+    "Laboratory name and institution":"Open Source Geospatial Laboratory at ETH Zurich",
+    "City":"Zurich",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.5481, 47.3764",
+    "Application received / Announced":"2013-09-20",
+    "Notes (projects, collaborations, etc)":"Institute of Cartography and Geoinformation, ETH Zurich",
+    "Contact names":"Ionut Iosifescu Enescu",
+    "Contact emails":"iosifescu@ethz.ch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 14.493651,41.630815 ]
+    },
+    "properties": {
+    "FIELD1":11,
+    "Laboratory name and institution":"University of Molise",
+    "City":"Molise",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"14.493651, 41.630815",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"Teaching Geospatial Analysis and Modeling using QGIS and other OSGeo software",
+    "Contact names":"Rossella Nocera",
+    "Contact emails":"rossella.nocera at unimol.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.013407,52.178478 ]
+    },
+    "properties": {
+    "FIELD1":12,
+    "Laboratory name and institution":"Institute of Geodesy and Cartography (IGiK)",
+    "City":"Warsaw",
+    "Country":"Poland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"21.013407, 52.178478",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Prof. Dr. Marek Baranowski",
+    "Contact emails":"Marek.Baranowski@igik.edu.pl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 26.103889,44.4325 ]
+    },
+    "properties": {
+    "FIELD1":13,
+    "Laboratory name and institution":"Faculty of Geography, University of Bucharest",
+    "City":"Bucharest",
+    "Country":"Romania",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"26.103889, 44.432500",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"new website under development",
+    "Contact names":"Andreea Marin",
+    "Contact emails":"andreea dot marin09 at yahoo dot com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 18.418833,47.188778 ]
+    },
+    "properties": {
+    "FIELD1":14,
+    "Laboratory name and institution":"University Alba Regia Technical Faculty Institute of Geoinformatics OSGeo Lab",
+    "City":"Székesfehérvár",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"18.418833, 47.188778",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Andrea Podör",
+    "Contact emails":"podor.andrea@amk.uni-obuda.hu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.1737,48.77996 ]
+    },
+    "properties": {
+    "FIELD1":15,
+    "Laboratory name and institution":"Stuttgart University of Applied Sciences",
+    "City":"Stuttgart",
+    "Country":"Germany",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"9.17370, 48.77996",
+    "Application received / Announced":"2013-10-14",
+    "Notes (projects, collaborations, etc)":"FOSS@HFT: Open Source Group at University of Applied Sciences; Open Source based geospatial education; OSGEo Certification framework",
+    "Contact names":"Franz-Josef Behr",
+    "Contact emails":"franz-josef.behr at hft-stuttgart.de"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -49.23329,-25.45304 ]
+    },
+    "properties": {
+    "FIELD1":16,
+    "Laboratory name and institution":"Laboratorio Geoespacial Livre, Federal University of Paraná",
+    "City":"Paraná",
+    "Country":"Brazil",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-49.23329, -25.45304",
+    "Application received / Announced":"2012-05-23",
+    "Notes (projects, collaborations, etc)":"Active - Website Laboratório Geoespacial Livre Research on: Academic and Collaborative SDI; Geo Big Data, Geovisualization, Indoor Mapping, Data Quality, Use and User Issues, VGI.",
+    "Contact names":"Silvana Camboim",
+    "Contact emails":"silvanacamboim at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 21.2460432,48.7288883 ]
+    },
+    "properties": {
+    "FIELD1":17,
+    "Laboratory name and institution":"Institute of Geography, Pavol Jozef Šafárik University",
+    "City":"Kosice",
+    "Country":"Slovakia",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"21.2460432, 48.7288883",
+    "Application received / Announced":"2016-04-25",
+    "Notes (projects, collaborations, etc)":"Open source GIS course, development and applications of GRASS GIS; R; MapServer; LAStools; MeshLab; CloudCompare; Blender",
+    "Contact names":"Jaroslav Hofierka",
+    "Contact emails":"jaroslav.hofierka@upjs.sk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.06564,4.62799 ]
+    },
+    "properties": {
+    "FIELD1":18,
+    "Laboratory name and institution":"OSGeoLabUD, Universidad Distrital Francisco José de Caldas",
+    "City":"Bogotá",
+    "Country":"Colombia",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-74.06564,4.62799",
+    "Application received / Announced":"2017-02-22",
+    "Notes (projects, collaborations, etc)":"OSGeoLabUD, Universidad Distrital Francisco José de Caldas",
+    "Contact names":"Paulo Cesar Coronado Sanchez",
+    "Contact emails":"paulo_cesar@udistrital.edu.co"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -56.176441,-34.902405 ]
+    },
+    "properties": {
+    "FIELD1":19,
+    "Laboratory name and institution":"Universidad de la República",
+    "City":"Montevideo",
+    "Country":"Uruguay",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-56.176441, -34.902405",
+    "Application received / Announced":"2013-03-01",
+    "Notes (projects, collaborations, etc)":"Laboratorio de Técnicas Aplicadas al Análisis del Territorio",
+    "Contact names":"Virginia Fernandez",
+    "Contact emails":"vivi@fcien.edu.uy"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 11.139053,46.064827 ]
+    },
+    "properties": {
+    "FIELD1":20,
+    "Laboratory name and institution":"Dipartimento di Ingegneria Civile Ambientale e Meccanica, University of Trento",
+    "City":"Trento",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"11.139053, 46.064827",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"Tutorials in the Italian and English languages",
+    "Contact names":"Clara Tattoni",
+    "Contact emails":"clara.tattoni at unitn.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.67024,49.41739 ]
+    },
+    "properties": {
+    "FIELD1":21,
+    "Laboratory name and institution":"University of Heidelberg",
+    "City":"Heidelberg",
+    "Country":"Germany",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.67024,49.41739",
+    "Application received / Announced":"2016-02-08",
+    "Notes (projects, collaborations, etc)":"Heidelberg GIScience",
+    "Contact names":"Alexander Zipf and Bernhard Hofle",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.6764,35.7818 ]
+    },
+    "properties": {
+    "FIELD1":22,
+    "Laboratory name and institution":"North Carolina State University OSGeoREL",
+    "City":"Raleigh, NC",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-78.6764, 35.7818",
+    "Application received / Announced":"2012-10-18",
+    "Notes (projects, collaborations, etc)":"Geospatial analysis, modeling and visualization, GRASS GIS development, course development",
+    "Contact names":"Helena Mitasova",
+    "Contact emails":"hmitaso at ncsu.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.524696,42.393578 ]
+    },
+    "properties": {
+    "FIELD1":23,
+    "Laboratory name and institution":"University of Massachusetts Amherst",
+    "City":"Amherst",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-72.524696, 42.393578",
+    "Application received / Announced":"2012-10-18",
+    "Notes (projects, collaborations, etc)":"Developed and supports a web-based academic paper review system for use at FOSS4G global and regional conferences (http://scholarworks.umass.edu/foss4g/); collaboration on open educational; and grant efforts to support GeoForAll's activities.",
+    "Contact names":"Charlie Schweik",
+    "Contact emails":"cschweik at pubpol dot umass dot edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.251311,38.958578 ]
+    },
+    "properties": {
+    "FIELD1":24,
+    "Laboratory name and institution":"University of Kansas",
+    "City":"Lawrence, KS",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-95.251311, 38.958578",
+    "Application received / Announced":"2013-08-23",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Xingong Li",
+    "Contact emails":"lixi at ku.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -121.766945,38.548801 ]
+    },
+    "properties": {
+    "FIELD1":25,
+    "Laboratory name and institution":"Center for Spatial Sciences, University of California, Davis",
+    "City":"Davis",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-121.766945, 38.548801",
+    "Application received / Announced":"2013-02-04",
+    "Notes (projects, collaborations, etc)":"R-Spatial.org,OSGeo-Live",
+    "Contact names":"Alex Mandel",
+    "Contact emails":"aimandel at ucdavis.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -102.5791,22.7608 ]
+    },
+    "properties": {
+    "FIELD1":26,
+    "Laboratory name and institution":"Laboratorio de Software Libre",
+    "City":"Zacatecas",
+    "Country":"Mexico",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-102.5791, 22.7608",
+    "Application received / Announced":"2013-04-05",
+    "Notes (projects, collaborations, etc)":"in process of being established",
+    "Contact names":"Manual Haro",
+    "Contact emails":"manuel.haro at zacatecas.gob.mx"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -81.357886,41.153667 ]
+    },
+    "properties": {
+    "FIELD1":27,
+    "Laboratory name and institution":"Kent State University",
+    "City":"Kent, Ohio",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-81.357886,41.153667",
+    "Application received / Announced":"2013-08-30",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Xinyue Ye",
+    "Contact emails":"xye5 at kent.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.73,35.306944 ]
+    },
+    "properties": {
+    "FIELD1":28,
+    "Laboratory name and institution":"Center for Applied GIScience, University of North Carolina, Charlotte",
+    "City":"Charlotte, NC",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-80.730000, 35.306944",
+    "Application received / Announced":"2013-09-05",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Wenwu Tang",
+    "Contact emails":"WenwuTang at uncc.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 101.721298,3.172932 ]
+    },
+    "properties": {
+    "FIELD1":29,
+    "Laboratory name and institution":"University of Nottingham, Malaysia campus",
+    "City":"Semenyih",
+    "Country":"Malaysia",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"101.721298, 3.172932",
+    "Application received / Announced":"2012-01-09",
+    "Notes (projects, collaborations, etc)":"OSGEO research lab",
+    "Contact names":"Tuong Thuy Vu",
+    "Contact emails":"Tuongthuy.Vu at nottingham.edu.my"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 101.874222,2.943748 ]
+    },
+    "properties": {
+    "FIELD1":30,
+    "Laboratory name and institution":"Universiti Teknologi Malaysia (UTM)",
+    "City":"Johor Bahru",
+    "Country":"Malaysia",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"101.874222, 2.943748",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"Website under construction. Teaching GIS software using QGIS and other OSGEO products. Introduce web based mapping tools using MapGuide Open Source and QGIS.",
+    "Contact names":"Nurul Hawani Idris",
+    "Contact emails":"hawani at utm.my"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.059875,14.656005 ]
+    },
+    "properties": {
+    "FIELD1":31,
+    "Laboratory name and institution":"National College of Public Administration and Governance(NCPAG), University of the Philippines",
+    "City":"Manila",
+    "Country":"Philippines",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"121.059875, 14.656005",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"in process of being  established",
+    "Contact names":"Noriel Christopher Tiglao",
+    "Contact emails":"nctiglao at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.062241,14.64372 ]
+    },
+    "properties": {
+    "FIELD1":32,
+    "Laboratory name and institution":"Environmental Science for Social Change (ESSC)",
+    "City":"Quezon City",
+    "Country":"Philippines",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"121.062241, 14.64372",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"in process of being  established",
+    "Contact names":"Maning Sambale",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 78.3503,17.4454 ]
+    },
+    "properties": {
+    "FIELD1":33,
+    "Laboratory name and institution":"Lab for Spatial Informatics, IIIT Hyderabad",
+    "City":"Hyderabad",
+    "Country":"India",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"78.3503, 17.4454",
+    "Application received / Announced":"2011-08-22",
+    "Notes (projects, collaborations, etc)":"LSI, a unique center in India that promotes Open Source GeoSpatial Research and System building efforts at multiple levels since 2006. Also, an active proponent for use of Open Source and Open Technology in Educational initiatives and eGovernance Projects.",
+    "Contact names":"Dr K S Rajan",
+    "Contact emails":"rajan@iiit.ac.in"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 73.175045,33.52006 ]
+    },
+    "properties": {
+    "FIELD1":34,
+    "Laboratory name and institution":"Geospatial Research and Education Lab(GREL), Institute of Space Technology (IST)",
+    "City":"Islamabad",
+    "Country":"Pakistan",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"73.175045, 33.520060",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Waqas Qazi",
+    "Contact emails":"waqas(dot)qazi(at)grel(dot)ist(dot)edu(dot)pk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 28.22847,-25.75429 ]
+    },
+    "properties": {
+    "FIELD1":35,
+    "Laboratory name and institution":"Department of Geography, Geoinformatics and Meteorology, University of Pretoria",
+    "City":"Pretoria",
+    "Country":"South Africa",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"28.22847, -25.75429",
+    "Application received / Announced":"2012-05-15",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Serena Coetzee",
+    "Contact emails":"serena dot coetzee at up dot ac dot za"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 36.858574,-1.249038 ]
+    },
+    "properties": {
+    "FIELD1":36,
+    "Laboratory name and institution":"Regional Centre for  Mapping of Resources for Development (RCMRD)",
+    "City":"Nairobi",
+    "Country":"Kenya",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"36.858574, -1.249038",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Hussein Farah",
+    "Contact emails":"farah at rcmrd.org"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -0.191617,5.650366 ]
+    },
+    "properties": {
+    "FIELD1":37,
+    "Laboratory name and institution":"University of Ghana",
+    "City":"Accra",
+    "Country":"Ghana",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"-0.191617, 5.650366",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Foster Mensah",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 144.962006,-37.797932 ]
+    },
+    "properties": {
+    "FIELD1":38,
+    "Laboratory name and institution":"The University of Melbourne",
+    "City":"Melbourne",
+    "Country":"Australia",
+    "Continent":"Australia",
+    "Coordinates (longitude, latitude)":"144.962006, -37.797932",
+    "Application received / Announced":"2013-07-22",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Jack Barton",
+    "Contact emails":"jack.barton at unimelb.edu.au"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.328799,27.714506 ]
+    },
+    "properties": {
+    "FIELD1":39,
+    "Laboratory name and institution":"Spatial {Query} Lab at Texas A&M University - Corpus Christi",
+    "City":"Corpus Christi",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-97.328799, 27.714506",
+    "Application received / Announced":"2013-09-09",
+    "Notes (projects, collaborations, etc)":"FOSS4G curriculum development focusing on QGIS and GRASS. Curriculum available on our website.",
+    "Contact names":"Rick Smith",
+    "Contact emails":"Richard.Smith at tamucc.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 72.566004,23.039568 ]
+    },
+    "properties": {
+    "FIELD1":40,
+    "Laboratory name and institution":"CEPT University",
+    "City":"Ahmedabad",
+    "Country":"India",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"72.566004,23.039568",
+    "Application received / Announced":"2012-07-18",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Prof. Anjana Vyas        &      Ms. Darshana Rawal",
+    "Contact emails":"anjanavyas at cept.ac.in    rawalnet at cept.ac.in"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -68.57,-31.54 ]
+    },
+    "properties": {
+    "FIELD1":41,
+    "Laboratory name and institution":"Programa de Gestión de Información y Gestión de Datos -IRPHa Universidad Nacional de San Juan",
+    "City":"San Juan",
+    "Country":"Argentina",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-68.57, -31.54",
+    "Application received / Announced":"2012-06-15",
+    "Notes (projects, collaborations, etc)":"Nodo de información territorial abierta a investigadores, instituciones y público. Aplicación de software libre para futura infraestructura de datos espaciales, interoperabilidad y webservices./ Node for Territorial information open to researchers, institutions and public. Free software application for future spatial data infrastructure, interoperability and webservices",
+    "Contact names":"Esp. Lic. María Valentina Soria",
+    "Contact emails":"valentina@unsj.edu.ar; pgid.irpha@gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -111.940005,33.42551 ]
+    },
+    "properties": {
+    "FIELD1":42,
+    "Laboratory name and institution":"GeoDa Center for Geospatial Analysis and Computation, Arizona State University",
+    "City":"Tempe, AZ",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-111.940005, 33.425510",
+    "Application received / Announced":"2013-09-27",
+    "Notes (projects, collaborations, etc)":"Spatial econometrics, geocomputation, spatial optimization - GeoDa, PySAL, GeoDaSpace",
+    "Contact names":"Luc Anselin",
+    "Contact emails":"geodacenter at asu.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 23.72931,37.983716 ]
+    },
+    "properties": {
+    "FIELD1":43,
+    "Laboratory name and institution":"National Technical University of Athens",
+    "City":"Athens",
+    "Country":"Greece",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"23.729310, 37.983716",
+    "Application received / Announced":"2013-09-26",
+    "Notes (projects, collaborations, etc)":"in process of  being established",
+    "Contact names":"",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.352222,48.856614 ]
+    },
+    "properties": {
+    "FIELD1":44,
+    "Laboratory name and institution":"IGN- France",
+    "City":"Paris",
+    "Country":"France",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"2.352222, 48.856614",
+    "Application received / Announced":"2013-09-26",
+    "Notes (projects, collaborations, etc)":"in process of  being established",
+    "Contact names":"Benedicte Bucher",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.173403,41.385064 ]
+    },
+    "properties": {
+    "FIELD1":45,
+    "Laboratory name and institution":"Universitat Oberta de Catalunya",
+    "City":"Barcelona",
+    "Country":"Spain",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"2.173403, 41.385064",
+    "Application received / Announced":"2013-09-27",
+    "Notes (projects, collaborations, etc)":"From UOC, we give some geospatial courses integrated in more general curricula, like telecommunications or data science. From the research point of view, we apply the GIS techniques to logistics and indoor positioning.",
+    "Contact names":"Dr. Antoni Pérez Navarro",
+    "Contact emails":"aperezn at uoc.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 5.665662,51.9875 ]
+    },
+    "properties": {
+    "FIELD1":46,
+    "Laboratory name and institution":"ISRIC - World Soil Information foundation",
+    "City":"Wageningen",
+    "Country":"The Netherlands",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"5.665662,51.9875",
+    "Application received / Announced":"2013-10-02",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Jorge de Jesus",
+    "Contact emails":"jorge.mendesdejesus at wur.nl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -8.41154,43.362344 ]
+    },
+    "properties": {
+    "FIELD1":47,
+    "Laboratory name and institution":"Universidade da Coruña",
+    "City":"A Coruña (España)",
+    "Country":"Spain",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-8.411540, 43.362344",
+    "Application received / Announced":"2013-10-15",
+    "Notes (projects, collaborations, etc)":"in process of  being established",
+    "Contact names":"Alberto Varela García",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.484623,5.263234 ]
+    },
+    "properties": {
+    "FIELD1":48,
+    "Laboratory name and institution":"Geoinformatic Unit,  Universiti Sains Malaysia",
+    "City":"Penang",
+    "Country":"Malaysia",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"100.484623, 5.263234",
+    "Application received / Announced":"2013-10-16",
+    "Notes (projects, collaborations, etc)":"Teaching and conducting research on geographical information science using QGIS & various other OSGEO products. Had done research on use opensource GIS for secondary schools. http://campusgis.usm.my/",
+    "Contact names":"Ruslan Rainis",
+    "Contact emails":"rruslan at usm.my"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 85.55,27.616667 ]
+    },
+    "properties": {
+    "FIELD1":49,
+    "Laboratory name and institution":"Kathmandu University",
+    "City":"Dhulikhel",
+    "Country":"Nepal",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"85.550000, 27.616667",
+    "Application received / Announced":"2012-12-24",
+    "Notes (projects, collaborations, etc)":"https://sites.google.com/a/ku.edu.np/opensourcegeospatial/",
+    "Contact names":"Shashish Maharjan",
+    "Contact emails":""
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -3.17909,51.481581 ]
+    },
+    "properties": {
+    "FIELD1":51,
+    "Laboratory name and institution":"University of South Wales",
+    "City":"Cardiff",
+    "Country":"United Kingdom",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-3.179090,51.481581",
+    "Application received / Announced":"2013-10-31",
+    "Notes (projects, collaborations, etc)":"Spatial processing on the web using open standards and open source software",
+    "Contact names":"Dr Mark Ware",
+    "Contact emails":"mark.ware at southwales.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -122.676207,45.523452 ]
+    },
+    "properties": {
+    "FIELD1":52,
+    "Laboratory name and institution":"Portland State University",
+    "City":"Portland, Oregon",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-122.676207,45.523452",
+    "Application received / Announced":"2013-10-22",
+    "Notes (projects, collaborations, etc)":"Warming up",
+    "Contact names":"David Percy",
+    "Contact emails":"percy at pdx.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 36.821946,-1.292066 ]
+    },
+    "properties": {
+    "FIELD1":53,
+    "Laboratory name and institution":"IGAD Climate Prediction and Applications Center",
+    "City":"Nairobi",
+    "Country":"Kenya",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"36.821946,-1.292066",
+    "Application received / Announced":"2013-10-29",
+    "Notes (projects, collaborations, etc)":"In process of being established",
+    "Contact names":"Muyambi Fortunate",
+    "Contact emails":"fbenda at icpac.net"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -38.543395,-3.718394 ]
+    },
+    "properties": {
+    "FIELD1":54,
+    "Laboratory name and institution":"Federal University of Ceará",
+    "City":"Ceará",
+    "Country":"Brazil",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-38.543395,-3.718394",
+    "Application received / Announced":"2013-10-29",
+    "Notes (projects, collaborations, etc)":"Active - Website Laboratório de Geoprocessamento da UFC",
+    "Contact names":"Prof. Dr. Adryane Gorayeb",
+    "Contact emails":"adryanegorayeb@gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -2.223409,51.872215 ]
+    },
+    "properties": {
+    "FIELD1":55,
+    "Laboratory name and institution":"University of Gloucestershire",
+    "City":"Gloucester and Cheltenham",
+    "Country":"United Kingdom",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-2.223409, 51.872215",
+    "Application received / Announced":"2013-11-06",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Dr Robert Berry",
+    "Contact emails":"osgeolab at glos.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 79.9008,6.7964 ]
+    },
+    "properties": {
+    "FIELD1":56,
+    "Laboratory name and institution":"University of Moratuwa",
+    "City":"Moratuwa",
+    "Country":"Sri Lanka",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"79.9008, 6.7964",
+    "Application received / Announced":"2013-11-11",
+    "Notes (projects, collaborations, etc)":"OSGeoSL",
+    "Contact names":"Aruna Wickramasinghe",
+    "Contact emails":"toaruna at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 121.452,31.198 ]
+    },
+    "properties": {
+    "FIELD1":57,
+    "Laboratory name and institution":"Fudan University",
+    "City":"Shanghai",
+    "Country":"China",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"121.452, 31.198",
+    "Application received / Announced":"2013-11-14",
+    "Notes (projects, collaborations, etc)":"Open Source STATistics",
+    "Contact names":"Zhijie Zhang",
+    "Contact emails":"epistat at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -95.230691,38.938859 ]
+    },
+    "properties": {
+    "FIELD1":58,
+    "Laboratory name and institution":"Haskell Indian Nations University",
+    "City":"Lawrence, Kansas",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-95.230691, 38.938859",
+    "Application received / Announced":"2013-11-22",
+    "Notes (projects, collaborations, etc)":"Haskell Indian Nations University",
+    "Contact names":"Dave McDermott",
+    "Contact emails":"dmcdermott at haskell.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 15.963888,45.8085 ]
+    },
+    "properties": {
+    "FIELD1":59,
+    "Laboratory name and institution":"University of Zagreb, Faculty of Geodesy",
+    "City":"Zagreb",
+    "Country":"Croatia",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"15.963888, 45.808500",
+    "Application received / Announced":"2013-11-25",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dražen Tutic",
+    "Contact emails":"dtutic at geof.hr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -68.1547,-16.4949 ]
+    },
+    "properties": {
+    "FIELD1":60,
+    "Laboratory name and institution":"GeoBolivia-Vice-presidency of the State",
+    "City":"La Paz",
+    "Country":"Bolivia",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-68.1547, -16.4949",
+    "Application received / Announced":"2013-11-24",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Raul Fernando Molina Rodriguez",
+    "Contact emails":"rafemoro at gmail.com rmolina@geo.gob.bo"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -66.641474,45.950252 ]
+    },
+    "properties": {
+    "FIELD1":61,
+    "Laboratory name and institution":"Geodesy and Geomatics Engineering, University of New Brunswick",
+    "City":"Fredericton, NB",
+    "Country":"Canada",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-66.641474, 45.950252",
+    "Application received / Announced":"2013-12-10",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Emmanuel Stefanakis",
+    "Contact emails":"emmanuel.stefanakis at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 80.78995,6.7102 ]
+    },
+    "properties": {
+    "FIELD1":62,
+    "Laboratory name and institution":"Faculty of Geomatics, Sabaragamuwa University of Sri Lanka",
+    "City":"Belihuloya, Sabaragamuwa",
+    "Country":"Sri Lanka",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"80.78995, 6.7102",
+    "Application received / Announced":"2013-12-12",
+    "Notes (projects, collaborations, etc)":"In process of being established",
+    "Contact names":"Thilantha Dammalage",
+    "Contact emails":"thilantha9 at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 79.97316667,6.914866667 ]
+    },
+    "properties": {
+    "FIELD1":63,
+    "Laboratory name and institution":"Dpt of IT, Faculty of Computing, Sri Lanka Institute of Information Technology",
+    "City":"Malabe",
+    "Country":"Sri Lanka",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"79.973166667, 6.914866667",
+    "Application received / Announced":"2013-12-13",
+    "Notes (projects, collaborations, etc)":"OSGeoSLIIT",
+    "Contact names":"Nimalika Fernando",
+    "Contact emails":"nimalikaf at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.1487,46.2253 ]
+    },
+    "properties": {
+    "FIELD1":64,
+    "Laboratory name and institution":"University of Geneva - Institute for Environmental Sciences",
+    "City":"Geneva",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"6.1487, 46.2253",
+    "Application received / Announced":"2013-12-19",
+    "Notes (projects, collaborations, etc)":"(published 2014-07-24)",
+    "Contact names":"Gregory Giuliani",
+    "Contact emails":"gregory.giuliani at unige.ch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.8169,47.22341 ]
+    },
+    "properties": {
+    "FIELD1":65,
+    "Laboratory name and institution":"Geometa Lab at HSR - University of Applied Sciences Rapperswil",
+    "City":"Rapperswil",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.81690, 47.22341",
+    "Application received / Announced":"2014-01-26",
+    "Notes (projects, collaborations, etc)":"(published 2014-02-05)",
+    "Contact names":"Prof. Stefan Keller",
+    "Contact emails":"sfkeller at hsr.ch (and/or at gmail.ch)"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 30.515647,50.456936 ]
+    },
+    "properties": {
+    "FIELD1":66,
+    "Laboratory name and institution":"National University of \"Kyiv-Mohyla Academy\", Ecology Faculty",
+    "City":"Kyiv",
+    "Country":"Ukraine",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"30.515647, 50.456936",
+    "Application received / Announced":"2014-02-16",
+    "Notes (projects, collaborations, etc)":"In proess of being established",
+    "Contact names":"Tetyana Kuchma",
+    "Contact emails":"tanyakuchma at yahoo.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 22.996707,40.567811 ]
+    },
+    "properties": {
+    "FIELD1":67,
+    "Laboratory name and institution":"Centre for Research and Technology Hellas - Hellenic Institute of Transport",
+    "City":"Thessaloniki",
+    "Country":"Greece",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"22.996707, 40.567811",
+    "Application received / Announced":"2014-02-17",
+    "Notes (projects, collaborations, etc)":"In process of being established",
+    "Contact names":"Dr. Evangelos Mitsakis",
+    "Contact emails":"emit at certh.gr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 139.938952,35.902681 ]
+    },
+    "properties": {
+    "FIELD1":68,
+    "Laboratory name and institution":"Centre for Spatial Information Science(CSIS), University of Tokyo",
+    "City":"Kashiwa-shi, Chiba",
+    "Country":"Japan",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"139.938952, 35.902681",
+    "Application received / Announced":"2014-02-18",
+    "Notes (projects, collaborations, etc)":"VGI and Neocartography studies @ Divisions of Research Initiative for Global Geospatial Information, Urban Data Challenge",
+    "Contact names":"Dr. Toshikazu Seto",
+    "Contact emails":"tosseto at csis.u-tokyo.ac.jp"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -97.407096,27.764053 ]
+    },
+    "properties": {
+    "FIELD1":69,
+    "Laboratory name and institution":"FOSS4Geo Academy @ Del Mar College National Open Geospatial Technology Consortium",
+    "City":"Corpus Christi, Republic of Texas",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-97.407096, 27.764053",
+    "Application received / Announced":"2014-02-18",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Dr. Phillip Davis",
+    "Contact emails":"pdavis at delmar.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 135.507556,34.593067 ]
+    },
+    "properties": {
+    "FIELD1":70,
+    "Laboratory name and institution":"Osaka City University(OCU)",
+    "City":"Sumiyoshi-ku, Osaka",
+    "Country":"Japan",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"135.507556, 34.593067",
+    "Application received / Announced":"2014-02-23",
+    "Notes (projects, collaborations, etc)":"Active",
+    "Contact names":"Venkatesh RAGHAVAN",
+    "Contact emails":"venka.osgeo at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.962795,44.400133 ]
+    },
+    "properties": {
+    "FIELD1":71,
+    "Laboratory name and institution":"Università di Genova - Laboratorio di Geomatica",
+    "City":"Genova",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.962795, 44.400133",
+    "Application received / Announced":"2014-03-21",
+    "Notes (projects, collaborations, etc)":"Gter Innovation in Geomatics, Gnss and Gis (spin-off company)",
+    "Contact names":"Tiziano Cosso - Bianca Federici - Roberto Marzocchi - Domenico Sguerso",
+    "Contact emails":"bianca.federici at unige.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -15.456207,28.069303 ]
+    },
+    "properties": {
+    "FIELD1":72,
+    "Laboratory name and institution":"Universidad de Las Palmas de Gran Canaria - Escuela de Ingenierías Industriales y Civiles - Grado en Ingenieria Geomática y Topografía",
+    "City":"Las Palmas de Gran Canaria",
+    "Country":"Spain",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-15.456207, 28.069303",
+    "Application received / Announced":"2014-03-23",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Fernando Toscano Benítez",
+    "Contact emails":"sub_dgn at eiic.ulpgc.es"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.964831,40.768703 ]
+    },
+    "properties": {
+    "FIELD1":73,
+    "Laboratory name and institution":"Center for Advanced Research on Spatial Information, Hunter College - CUNY",
+    "City":"New York",
+    "Country":"US",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-73.964831, 40.768703",
+    "Application received / Announced":"2014-04-04",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Carson Farmer",
+    "Contact emails":"carson.farmer at hunter.cuny.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 22.961498,40.627516 ]
+    },
+    "properties": {
+    "FIELD1":74,
+    "Laboratory name and institution":"Hellenic digital earth Centre of Excellence, Aristotle University of Thessaloniki - AUTH",
+    "City":"Thessaloniki",
+    "Country":"Greece",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"22.961498, 40.627516",
+    "Application received / Announced":"2014-04-05",
+    "Notes (projects, collaborations, etc)":"http://www.digital-earth.edu.gr/ http://www.auth.gr/en/units/19861",
+    "Contact names":"Nikos Lambrinos",
+    "Contact emails":"labrinos at eled.auth.gr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 13.039586,47.823711 ]
+    },
+    "properties": {
+    "FIELD1":75,
+    "Laboratory name and institution":"Interfaculty Department of Geoinformatics - Z_GIS, University of Salzburg",
+    "City":"Salzburg",
+    "Country":"Austria",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"13.039586, 47.823711",
+    "Application received / Announced":"2014-04-14",
+    "Notes (projects, collaborations, etc)":"The UNIGIS International Association is the distance education initiative offering masters and diploma programmes in Geographical Information Science and Systems",
+    "Contact names":"Hermann Klug",
+    "Contact emails":"hermann.klug at sbg.ac.at"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -114.132457,51.079735 ]
+    },
+    "properties": {
+    "FIELD1":76,
+    "Laboratory name and institution":"The GI Science Group @ the Department of Geomatics Engineering, University of Calgary",
+    "City":"Calgary",
+    "Country":"Canada",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-114.132457, 51.079735",
+    "Application received / Announced":"2014-04-22",
+    "Notes (projects, collaborations, etc)":"in the process of being established",
+    "Contact names":"Andrew Hunter",
+    "Contact emails":"ahunter at ucalgary.ca"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 34.78346,30.85332 ]
+    },
+    "properties": {
+    "FIELD1":77,
+    "Laboratory name and institution":"Ben Gurion University of the Negev (BGU)",
+    "City":"Sede Boqer and Beer Sheva",
+    "Country":"Israel",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"34.78346, 30.85332",
+    "Application received / Announced":"2014-04-22",
+    "Notes (projects, collaborations, etc)":"in the process of being established",
+    "Contact names":"Yaakov GARB",
+    "Contact emails":"ygarb at bgu.ac.il"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 20.476321,44.805499 ]
+    },
+    "properties": {
+    "FIELD1":78,
+    "Laboratory name and institution":"University of Belgrade, Faculty of Civil Engineering, Department of geodesy and geoinformatics",
+    "City":"Belgrade",
+    "Country":"Serbia",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"20.476321, 44.805499",
+    "Application received / Announced":"2014-05-03",
+    "Notes (projects, collaborations, etc)":"http://osgl.grf.bg.ac.rs/",
+    "Contact names":"Milan Kilibarda",
+    "Contact emails":"kili at grf.bg.ac.rs"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 125.400779,43.99896 ]
+    },
+    "properties": {
+    "FIELD1":79,
+    "Laboratory name and institution":"Open Geospatial Laboratory of Northeast Institute of Geography and Agroecology, CAS",
+    "City":"Changchun, Jilin",
+    "Country":"China",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"125.400779, 43.99896",
+    "Application received / Announced":"2014-05-26",
+    "Notes (projects, collaborations, etc)":"http://lab.osgeo.cn/en",
+    "Contact names":"Bu Kun",
+    "Contact emails":"See Profile page"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.16305,45.773875 ]
+    },
+    "properties": {
+    "FIELD1":80,
+    "Laboratory name and institution":"Bay College",
+    "City":"Escanaba, Michigan",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-87.163050, 45.773875",
+    "Application received / Announced":"2014-06-07",
+    "Notes (projects, collaborations, etc)":"GIS degree in process of being established.",
+    "Contact names":"Karl Linderoth",
+    "Contact emails":"linderok at baycollege.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 30.4752782,50.3825971 ]
+    },
+    "properties": {
+    "FIELD1":81,
+    "Laboratory name and institution":"Taras Shevchenko National University of Kyiv (TSNUK) OSGeo Research and Education Lab, Faculty of Geography, Department of Physical Geography and Geoecology",
+    "City":"Kyiv",
+    "Country":"Ukraine",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"30.4752782, 50.3825971",
+    "Application received / Announced":"2014-07-11",
+    "Notes (projects, collaborations, etc)":"Geospatial analysis and modeling for landscape-ecological studies, and spatial planning; QGIS, SAGA GIS, and PostGIS; QGIS Ukraine User Group; http://lab.osgeo.org.ua",
+    "Contact names":"Daria Svidzinska",
+    "Contact emails":"d.svidzinska at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -105.0019444,39.0122222 ]
+    },
+    "properties": {
+    "FIELD1":82,
+    "Laboratory name and institution":"University of Colorado Denver, Department of Geography and Environmental Sciences",
+    "City":"Denver, CO",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-105.0019444, 39.0122222",
+    "Application received / Announced":"2014-08-17",
+    "Notes (projects, collaborations, etc)":"http://geospatial.ucdenver.edu/foss4g/ PostGIS tutorials and spatial analysis with PostGIS",
+    "Contact names":"Rafael Moreno",
+    "Contact emails":"Rafael.Moreno at ucdenver.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 1.481608,43.561984 ]
+    },
+    "properties": {
+    "FIELD1":83,
+    "Laboratory name and institution":"French Space Agency CNES",
+    "City":"Toulouse",
+    "Country":"France",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"1.481608, 43.561984",
+    "Application received / Announced":"2014-07-17",
+    "Notes (projects, collaborations, etc)":"in the process of being established",
+    "Contact names":"Manuel Grizonnet",
+    "Contact emails":"manuel.grizonnet at cnes.fr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -56.203617,-34.905912 ]
+    },
+    "properties": {
+    "FIELD1":84,
+    "Laboratory name and institution":"Comunidad gvSIG Uruguay",
+    "City":"Montevideo",
+    "Country":"Uruguay",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-56.203617, -34.905912",
+    "Application received / Announced":"2014-08-15",
+    "Notes (projects, collaborations, etc)":"Comunidad gvSIG Uruguay Blog SIG Libre Uruguay gvSIG Batoví Blog gvSIG Batoví",
+    "Contact names":"Sergio Acosta Y Lara; Ma. Victoria Álvarez; Alí Silva, Nadia Chaer; Diego Cabrera",
+    "Contact emails":"sergio.acostaylara@mtop.gub.uy; victoria.alvarez@imm.gub.uy; alis@correo.com.uy; nchaer@farq.edu.uy; dcabrera@mides.gub.uy"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.054403,47.481916 ]
+    },
+    "properties": {
+    "FIELD1":85,
+    "Laboratory name and institution":"Department of Geodesy and Surveying, Budapest University of Technology and Economics",
+    "City":"Budapest",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"19.054403, 47.481916",
+    "Application received / Announced":"2014-08-19",
+    "Notes (projects, collaborations, etc)":"in/outdoor positioning, sensor integration, QGIS plugins, MapServer, GRASS GIS, PostGIS, OSGeo Live, ... Tutorials, Conferences",
+    "Contact names":"Zoltan Siki",
+    "Contact emails":"siki.zoltan at epito.bme.hu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -71.116913,42.376398 ]
+    },
+    "properties": {
+    "FIELD1":86,
+    "Laboratory name and institution":"Center for Geographic Analysis, Harvard University",
+    "City":"Cambridge MA",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-71.116913,42.376398",
+    "Application received / Announced":"2014-09-17",
+    "Notes (projects, collaborations, etc)":"Active, WorldMap",
+    "Contact names":"Ben Lewis",
+    "Contact emails":"blewis at cga.harvard.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -73.240679,43.515866 ]
+    },
+    "properties": {
+    "FIELD1":87,
+    "Laboratory name and institution":"Community Mapping Lab Green Mountain College",
+    "City":"Poultney, VT",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-73.240679, 43.515866",
+    "Application received / Announced":"2014-09-17",
+    "Notes (projects, collaborations, etc)":"in process of being established, http://gmcmaplab.blog.com/?page_id=50",
+    "Contact names":"John Van Hoesen",
+    "Contact emails":"vanhoesenj at greenmtn.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.55149,35.59506 ]
+    },
+    "properties": {
+    "FIELD1":88,
+    "Laboratory name and institution":"National Environmental Modeling and Analysis Center (NEMAC), UNC Asheville",
+    "City":"Asheville, NC",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-82.55149, 35.59506",
+    "Application received / Announced":"2014-09-18",
+    "Notes (projects, collaborations, etc)":"in process of being established",
+    "Contact names":"John Derek Morgan",
+    "Contact emails":"jdmorgan at unca.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -106.60893,35.068353 ]
+    },
+    "properties": {
+    "FIELD1":89,
+    "Laboratory name and institution":"Birds Eye View GIS",
+    "City":"Albuquerque, NM",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-106.60893, 35.068353",
+    "Application received / Announced":"2014-09-18",
+    "Notes (projects, collaborations, etc)":"FOSS4G Educator at Central New Mexico Community College, Del Mar College and the University of New Mexico. Co-author Mastering QGIS , GeoAcademy, and author Discover QGIS",
+    "Contact names":"Kurt Menke",
+    "Contact emails":"kurt at birdseyeviewgis.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.38097,43.6591 ]
+    },
+    "properties": {
+    "FIELD1":90,
+    "Laboratory name and institution":"Geographic Information Science and Systems Research Group, Department of Geography and Environmental Studies, Ryerson University",
+    "City":"Toronto",
+    "Country":"Canada",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-79.38097, 43.65910",
+    "Application received / Announced":"2014-10-03",
+    "Notes (projects, collaborations, etc)":"Open-source Web mapping, participatory Geoweb, and spatial multi-criteria decision analysis tools; research, teaching, and consulting using QGIS and other OSGeo software",
+    "Contact names":"Claus Rinner",
+    "Contact emails":"crinner at ryerson dot ca"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 2.085741,49.043274 ]
+    },
+    "properties": {
+    "FIELD1":92,
+    "Laboratory name and institution":"ETIS Lab ENSEA UCP CNRS UMR 8051 , University of Cergy Pontoise",
+    "City":"Cergy Pontoise",
+    "Country":"France",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"2.085741, 49.043274",
+    "Application received / Announced":"2015-03-10",
+    "Notes (projects, collaborations, etc)":"Website under construction",
+    "Contact names":"Dimitris Kotzinos",
+    "Contact emails":"kotzino at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.4420794,35.6115585 ]
+    },
+    "properties": {
+    "FIELD1":93,
+    "Laboratory name and institution":"Department of Global Studies, Warren Wilson College",
+    "City":"Asheville NC",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-82.4420794, 35.6115585",
+    "Application received / Announced":"2015-04-19",
+    "Notes (projects, collaborations, etc)":"Website under construction",
+    "Contact names":"David Abernathy",
+    "Contact emails":"dabernathy@warren-wilson.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -80.529557,43.474073 ]
+    },
+    "properties": {
+    "FIELD1":94,
+    "Laboratory name and institution":"The Spatial Lab, Dept of Geography & Environmental Studies Wilfrid Laurier University",
+    "City":"Waterloo, ON",
+    "Country":"Canada",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-80.529557, 43.474073",
+    "Application received / Announced":"2015-05-01",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Colin Robertson",
+    "Contact emails":"crobertson at wlu.ca"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 30.05,31.2333 ]
+    },
+    "properties": {
+    "FIELD1":95,
+    "Laboratory name and institution":"National Authority for Remote Sensing & Space Sciences",
+    "City":"Cairo",
+    "Country":"Egypt",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"30.0500, 31.2333",
+    "Application received / Announced":"2015-05-01",
+    "Notes (projects, collaborations, etc)":"Improving the quality of Education/Vocational Education using Geospatial Technology based on FOSS",
+    "Contact names":"Rania Elsayed",
+    "Contact emails":"ranyaalsayed at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 82.863503,54.986816 ]
+    },
+    "properties": {
+    "FIELD1":96,
+    "Laboratory name and institution":"Geomatics and Virtual Reality Research Group, Siberian State University of Geosystems and Technologies",
+    "City":"Novosibirsk",
+    "Country":"Russian Federation",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"82.863503, 54.986816",
+    "Application received / Announced":"2015-05-18",
+    "Notes (projects, collaborations, etc)":"In process of being established",
+    "Contact names":"Alexey Kolesnikov, Pavel Kikin",
+    "Contact emails":"alekseykw at gmail.com, it-technologies at yandex.ru"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 150.87889,-34.40596 ]
+    },
+    "properties": {
+    "FIELD1":97,
+    "Laboratory name and institution":"SMART Open Source Geospatial Laboratory, University of Wollongong",
+    "City":"Wollongong",
+    "Country":"Australia",
+    "Continent":"Australia",
+    "Coordinates (longitude, latitude)":"150.87889, -34.40596",
+    "Application received / Announced":"2014-10-17",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dr Tomas Holderness",
+    "Contact emails":"tomas at uow.edu.au"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.054717,47.481911 ]
+    },
+    "properties": {
+    "FIELD1":98,
+    "Laboratory name and institution":"Department of Photogrammetry and Geoinformatics, Faculty of Civil Engineering, Budapest University of Technology and Economics",
+    "City":"Budapest",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"19.054717, 47.481911",
+    "Application received / Announced":"2015-06-29",
+    "Notes (projects, collaborations, etc)":"geoscope lab: Geospatial analysis, modeling and remote sensing, Curriculum development on QGIS",
+    "Contact names":"Dr. Gyorgy Szabo",
+    "Contact emails":"szabo.gyorgy at epito.bme.hu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -82.370095,36.300059 ]
+    },
+    "properties": {
+    "FIELD1":99,
+    "Laboratory name and institution":"Geospatial Exploration Lab, Department of Geosciences, East Tennessee State University",
+    "City":"Johnson City, Tennessee",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-82.3700950, 36.3000590",
+    "Application received / Announced":"2015-06-18",
+    "Notes (projects, collaborations, etc)":"Research and Applied Geospatial Projects; Research includes Hydrological Modeling, Ground-Penetrating Radar (GRP), Hazard/Disaster Modeling and Mapping, Climatological Modeling and Mapping, and Species Distribution Modeling; Applied Geospatial Projects include server- and app-based solutions for campus, local cities and counties, micro UAV (drone) videography and photo imaging, and community GIS support; Website: http://etsugeos.weebly.com/gel.html (Partially constructed)",
+    "Contact names":"Dr. Andrew Joyner",
+    "Contact emails":"joynert@mail.etsu.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 17.26551,49.593812 ]
+    },
+    "properties": {
+    "FIELD1":100,
+    "Laboratory name and institution":"Dept. of Geoinformatics, Palacký University Olomouc",
+    "City":"Olomouc",
+    "Country":"Czech Republic",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"17.26551,49.593812",
+    "Application received / Announced":"2015-06-29",
+    "Notes (projects, collaborations, etc)":"Courses with open source products",
+    "Contact names":"Dr. Rostislav Nétek",
+    "Contact emails":"rostislav.netek@upol.cz"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -0.133427,51.524773 ]
+    },
+    "properties": {
+    "FIELD1":101,
+    "Laboratory name and institution":"University College London",
+    "City":"London",
+    "Country":"United Kingdom",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-0.133427,51.524773",
+    "Application received / Announced":"2015-07-07",
+    "Notes (projects, collaborations, etc)":"Courses and research making extensive use of open source products and open data, run across UCL including Geomatic Engineering, Centre for Advanced Spatial Analysis, Geography and Archaeology.",
+    "Contact names":"Dr. Claire Ellul",
+    "Contact emails":"c.ellul@ucl.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.438534,41.451795 ]
+    },
+    "properties": {
+    "FIELD1":102,
+    "Laboratory name and institution":"A World Bridge",
+    "City":"Middletown, New York",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-74.438534, 41.451795",
+    "Application received / Announced":"2015-07-07",
+    "Notes (projects, collaborations, etc)":"Building advanced curriculum through the design and implementation of real-time, real-world, project-based learning environments.",
+    "Contact names":"Ron Fortunato",
+    "Contact emails":"ron@trilliumlearning.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 9.23434,45.48046 ]
+    },
+    "properties": {
+    "FIELD1":103,
+    "Laboratory name and institution":"IREA-CNR",
+    "City":"Via Edoardo Bassini, Milano",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"9.23434,45.48046",
+    "Application received / Announced":"2015-10-05",
+    "Notes (projects, collaborations, etc)":"Activities of IREA in FOSS are mainly related to research in the management of geo-based data and information, and in the development of free and open software to enable storage, management, view and access to geodata.",
+    "Contact names":"Alessandro Oggioni",
+    "Contact emails":"oggioni.a@irea.cnr.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 6.6595,46.77938 ]
+    },
+    "properties": {
+    "FIELD1":104,
+    "Laboratory name and institution":"HEIG-VD GIS-Lab University of Applied Sciences Western Switzerland at Yverdon",
+    "City":"Route de Cheseaux 1, 1401 Yverdon-les-Bains",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"6.65950,46.77938",
+    "Application received / Announced":"2015-10-08",
+    "Notes (projects, collaborations, etc)":"Key competences: spatial databases, modeling, data infrastructures, interoperability, webmapping, spatial webservices, spatial analysis, GIS project management, geovisualization, human-computer interaction and interface design",
+    "Contact names":"Prof. Dr. Jens Ingensand",
+    "Contact emails":"jens.ingensand@heig-vd.ch"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 139.403,35.5664 ]
+    },
+    "properties": {
+    "FIELD1":105,
+    "Laboratory name and institution":"Global Studies and Collaboration(GSC), Aoyama Gakuin University",
+    "City":"Fuchinobe 5-10-1, Sagamihara-shi, Kanagawa",
+    "Country":"Japan",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"139.4030, 35.5664",
+    "Application received / Announced":"2015-11-05",
+    "Notes (projects, collaborations, etc)":"Courses with open source products and open data. In addition, There is OpenStreetMap basecamp/CrisisMappers Japan base.",
+    "Contact names":"Prof. Taichi FURUHASHI",
+    "Contact emails":"taichi at gsc.aoyama.ac.jp"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 100.612086,14.079753 ]
+    },
+    "properties": {
+    "FIELD1":106,
+    "Laboratory name and institution":"Remote Sensing & GIS, Asian Institute of\nTechnology",
+    "City":"58 Moo 9, Km. 42, Paholyothin Highway, Klong Luang, Pathumthani 12120",
+    "Country":"Thailand",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"100.612086, 14.079753",
+    "Application received / Announced":"2015-11-24",
+    "Notes (projects, collaborations, etc)":"Open-source Web mapping, LBS, crowd sourcing, Sensor Web, OGC Web\nServices and QGIS plugins; research, teaching, and consulting using OGS \nWeb Services,QGIS and other OSGeo software",
+    "Contact names":"Dr. Sarawut Ninsawat",
+    "Contact emails":"sarawutn at ait.ac.th"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 12.4996909,9.1911318 ]
+    },
+    "properties": {
+    "FIELD1":107,
+    "Laboratory name and institution":"Geographic Information Science and Systems Research Group, School of Information Technology and Computing, American University of Nigeria",
+    "City":"98 Lamido Zubairu Way, Yola By-Pass, P.M.B. 2250,Yola, Adamawa State",
+    "Country":"Nigeria",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"12.4996909, 9.1911318",
+    "Application received / Announced":"2015-11-25",
+    "Notes (projects, collaborations, etc)":"Open-source Web mapping, participatory Geoweb, and spatial multi-criteria decision analysis tools; research, teaching, and consulting using QGIS and other OSGeo software",
+    "Contact names":"Prof. Kalum Priyanath Udagepola",
+    "Contact emails":"kalum.udagepola at aun.edu.ng"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 59.534125,36.306903 ]
+    },
+    "properties": {
+    "FIELD1":108,
+    "Laboratory name and institution":"Department of Geography",
+    "City":"Ferdowsi University of Mashhad, Mashad",
+    "Country":"Iran",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"59.534125,36.306903",
+    "Application received / Announced":"2016-02-01",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dr. Masoud Minaei",
+    "Contact emails":"m.minaei at um.ac.ir, minaei.masoud at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 11.332129,43.312688 ]
+    },
+    "properties": {
+    "FIELD1":109,
+    "Laboratory name and institution":"Laboratorio Dati Economici Storici Territoriali University of Siena",
+    "City":"Via Pier Andrea Mattioli 10 - 53100 Siena",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"11.332129,43.312688",
+    "Application received / Announced":"2016-04-23",
+    "Notes (projects, collaborations, etc)":"Key competences: GIS; data collection; spatial analysis; territorial data mapping; agent-based spatial modelling; volunteered geographic information; social media analysis",
+    "Contact names":"Prof. Cristina Capineri; Stefano Picascia",
+    "Contact emails":"{cristina,stefano}@ladestlab.it"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 23.70755,37.96124 ]
+    },
+    "properties": {
+    "FIELD1":110,
+    "Laboratory name and institution":"Spatial Analysis Research Group Department of Geography, Harokopio University of Athens",
+    "City":"El. Venizelou 70, Kallithea 17671, Athens",
+    "Country":"Greece",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"23.70755,37.96124",
+    "Application received / Announced":"2016-06-19",
+    "Notes (projects, collaborations, etc)":"Key competences: spatial analysis; GIS; vizualisation; open data creation; QGIS, statistical programming with R; R package lctools; spatial inequalities; python; spatial interaction modelling",
+    "Contact names":"Ass. Prof. Stamatis Kalogirou",
+    "Contact emails":"skalo@hua.gr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 76.780893,30.766247 ]
+    },
+    "properties": {
+    "FIELD1":111,
+    "Laboratory name and institution":"Geoinformatics Lab, Department of Civil Engineering PEC University of Technology, Chandigarh, India",
+    "City":"Sector 12, Chandigarh, 160012",
+    "Country":"India",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"76.780893,30.766247",
+    "Application received / Announced":"2016-09-12",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Ass. Prof. Har Amrit Singh Sandhu",
+    "Contact emails":"haramritsingh.pec@gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -87.6269709,41.8775909 ]
+    },
+    "properties": {
+    "FIELD1":112,
+    "Laboratory name and institution":"DePaul University, Department of Geography",
+    "City":"Chicago",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-87.6269709,41.8775909",
+    "Application received / Announced":"2016-10-28",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Cassandra Follett",
+    "Contact emails":"CFOLLETT@depaul.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -89.4011849,43.075844 ]
+    },
+    "properties": {
+    "FIELD1":113,
+    "Laboratory name and institution":"University of Wisconsin, Cartography Lab",
+    "City":"Madison",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-89.4011849,43.075844",
+    "Application received / Announced":"2016-12-01",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Carl Sack",
+    "Contact emails":"cmsack@wisc.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 36.816531,-1.279007 ]
+    },
+    "properties": {
+    "FIELD1":114,
+    "Laboratory name and institution":"Center for Agricultural Networking and Information Sharing (CANIS)",
+    "City":"Nairobi",
+    "Country":"Kenya",
+    "Continent":"Africa",
+    "Coordinates (longitude, latitude)":"36.816531,-1.279007",
+    "Application received / Announced":"2016-12-14",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Kiringai Kamau",
+    "Contact emails":"kiringai@gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -90.0009,38.7917 ]
+    },
+    "properties": {
+    "FIELD1":115,
+    "Laboratory name and institution":"Spatiotemporal Data Research and Education Laboratory Southern Illinois University Edwardsville, Computer Science Department",
+    "City":"Edwardsville, IL",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-90.0009, 38.7917",
+    "Application received / Announced":"2017-02-03",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Mark McKenney",
+    "Contact emails":"marmcke@siue.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 41.6333,-81.3666 ]
+    },
+    "properties": {
+    "FIELD1":116,
+    "Laboratory name and institution":"Lakeland Community College, Geography and Geospatial Technology",
+    "City":"Kirtland, OH",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"41.6333, -81.3666",
+    "Application received / Announced":"2017-04-17",
+    "Notes (projects, collaborations, etc)":"Geospatial education, spatial data management, geospatial intelligence, watershed modeling and analysis.",
+    "Contact names":"Bobby Oliver",
+    "Contact emails":"boliver@lakelandcc.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 126.946214,37.5650726 ]
+    },
+    "properties": {
+    "FIELD1":117,
+    "Laboratory name and institution":"GIS Lab of Ewha Womans University Dept of Social Studies (Geography), Ewha Womans University",
+    "City":"52, Ewhayeodae-gil, Seodaemun-gu, Seoul",
+    "Country":"South Korea",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"126.946214, 37.5650726",
+    "Application received / Announced":"2017-06-26",
+    "Notes (projects, collaborations, etc)":"Key competences: GIS; Spatial Analysis; Vizualisation; Open Source GIS Software, Education with Geospatial Technology",
+    "Contact names":"Prof. Youngok Kang",
+    "Contact emails":"ykang@ewha.ac.kr"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 177.4079991,-17.6686835 ]
+    },
+    "properties": {
+    "FIELD1":118,
+    "Laboratory name and institution":"School of Science & Technology GeoForAll Lab of The University of Fiji",
+    "City":"Saweni, Lautoka",
+    "Country":"Fiji Islands",
+    "Continent":"South Pacific",
+    "Coordinates (longitude, latitude)":"177.4079991,-17.6686835",
+    "Application received / Announced":"2017-07-06",
+    "Notes (projects, collaborations, etc)":"Key competences: GIS, Spatial Analysis, Vizualisation, Education with Geospatial Technology, Systems Development, Data Collection, Database Management, Systems Integration, Network Modelling/Simulation/Analysis, Web Mapping, Application Development, PostgreSQL/PostGIS, GeoServer, MapServer, OpenLayers, GeoEXT, GeoExplorer, GDAL, QGIS Server, QGIS Desktop, QGIS Web Client, Lizmap Web Client, Python and GRASS + R.",
+    "Contact names":"Professor A B M Shawkat Ali, Edwin Liava'a and Anish Maharaj",
+    "Contact emails":"shawkata@unifiji.ac.fj; edwinl@unifiji.ac.fj; anishm@unifiji.ac.fj"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -74.08731,4.636 ]
+    },
+    "properties": {
+    "FIELD1":119,
+    "Laboratory name and institution":"Laboratorio de Geomática de la Universidad Nacional de Colombia, Sede Bogotá",
+    "City":"Bogotá",
+    "Country":"Colombia",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-74.08731, 4.63600",
+    "Application received / Announced":"2017-08-09",
+    "Notes (projects, collaborations, etc)":"Apoyo de cursos de Geomática con software libre en la Maestría en Geomática: SIG con QGIS Desktop, Geoservicio con QGIS Server; Apoyo en los cursos de Geomática y Sistemas de Información Geográfica con software libre de QGIS Desktop, GRASS GIS y SAGA GIS en IngenieriaCivil; Apoyo con documentación y material libre a través de GeoTux: http://geotux.tuxfamily.org; Divulgación de scripts de R para análisis geoespacial a través de http://rpubs.com/ials2un, Investigación en el uso de tecnologías geomáticas que apoyen el desarrollo sostenible",
+    "Contact names":"Dr. Ivan Alberto Lizarazo Salcedo (Facultad de Ciencias Agrarias); MSc. Samuel Mesa (Facutad de Ingeniería)",
+    "Contact emails":"ializarazos@unal.edu.co; femesagi@unal.edu.co"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -70.656918,-33.467547 ]
+    },
+    "properties": {
+    "FIELD1":120,
+    "Laboratory name and institution":"Centro de Investigación en Recursos Naturales y Sustentabilidad (CIRENYS), Universidad Bernardo O Higgins",
+    "City":"Santiago",
+    "Country":"Chile",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-70.656918, -33.467547",
+    "Application received / Announced":"2017-08-09",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dr. Carlos Lara Peña",
+    "Contact emails":"carlos.lara@ubo.cl"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -72.920816,41.320066 ]
+    },
+    "properties": {
+    "FIELD1":121,
+    "Laboratory name and institution":"Spatial-Ecology and GeoComputation at Yale",
+    "City":"New Haven, CT",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-72.920816, 41.320066",
+    "Application received / Announced":"2017-25-11",
+    "Notes (projects, collaborations, etc)":"Teaching Open Source Software for GeoComputation under Linux environment through workshops, intensive trainings and summer schools. Info at www.spatial-ecology.net and Spatial-Ecology mailing list",
+    "Contact names":"Giuseppe Amatulli",
+    "Contact emails":"giuseppe.amatulli at gmail.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -156.779008,71.289655 ]
+    },
+    "properties": {
+    "FIELD1":123,
+    "Laboratory name and institution":"A World Bridge",
+    "City":"Barrow",
+    "Country":"Alaska",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-156.779008 , 71.289655",
+    "Application received / Announced":"2018-04-05",
+    "Notes (projects, collaborations, etc)":"delivering  data including climate change studies for USGS, NOAA and NASA",
+    "Contact names":"Ron Fortunato",
+    "Contact emails":"ron@trilliumlearning.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -1.139759,52.636878 ]
+    },
+    "properties": {
+    "FIELD1":124,
+    "Laboratory name and institution":"Pete Fisher Unit, University of Leicester",
+    "City":"Leicester",
+    "Country":"United Kingdom",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"-1.139759, 52.636878",
+    "Application received / Announced":"2018-04-05",
+    "Notes (projects, collaborations, etc)":"The Pete Fisher Laboratory for Geocomputation",
+    "Contact names":"Dr Stefano De Sabbata",
+    "Contact emails":"s.desabbata@le.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -91.180909,30.411775 ]
+    },
+    "properties": {
+    "FIELD1":125,
+    "Laboratory name and institution":"Landscape Architecture, Louisiana State University",
+    "City":"Baton Rouge, LA",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"-91.180909, 30.411775",
+    "Application received / Announced":"2018-05-10",
+    "Notes (projects, collaborations, etc)":"Geospatial modeling, 3D modeling, digital fabrication, and course development",
+    "Contact names":"Brendan Harmon",
+    "Contact emails":"baharmon@lsu.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 52.416686,-4.066497 ]
+    },
+    "properties": {
+    "FIELD1":128,
+    "Laboratory name and institution":"Department of Geography and Earth Science, Aberystwyth University",
+    "City":"Aberystwyth",
+    "Country":"United Kingdom",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"52.416686, -4.066497",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"The Earth Observation and Ecosystem Dynamics Lab at Aberystwyth University are world leads in the application of spatial data for environmental modelling. Work is primarily undertaken through open source software and we produce the following software tools RSGISLib, ARCSI and SPDLib while contribute to many more including GDAL, KEALib and pylidar. We run an MSc in Remote Sensing and GIS with a focus on open source tools, scripting and analysis of large datasets.",
+    "Contact names":"Dr Pete Bunting",
+    "Contact emails":"pfb@aber.ac.uk"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "FIELD1":129,
+    "Laboratory name and institution":"Indikatrix.org",
+    "City":"Budapest",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"19.1172618, 47.4691018",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Dr Ervin Wirth",
+    "Contact emails":"wirth.ervin@mailbox.org"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 41.2580265,-96.0116352 ]
+    },
+    "properties": {
+    "FIELD1":131,
+    "Laboratory name and institution":"Laboratory for Cartography and GIS, University of Nebraska",
+    "City":"Omaha",
+    "Country":"USA",
+    "Continent":"North America",
+    "Coordinates (longitude, latitude)":"41.2580265, -96.0116352",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"Three different computer laboratories are used for geospatial instruction at the University of Nebraska at Omaha. The Cartography and GIS Laboratory pictured here is used for instruction in open-source technologies.",
+    "Contact names":"Michael P. Peterson",
+    "Contact emails":"mpeterson@unomaha.edu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 50.4849078,3.3370012 ]
+    },
+    "properties": {
+    "FIELD1":132,
+    "Laboratory name and institution":"LabSIG UNGS",
+    "City":"Buenos Aires",
+    "Country":"Argentina",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"50.4849078, 3.3370012",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"MG. Nicolás Caloni",
+    "Contact emails":"ncaloni@ungs.edu.ar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 53.385066,-6.601791 ]
+    },
+    "properties": {
+    "FIELD1":133,
+    "Laboratory name and institution":"Maynooth University",
+    "City":"Kildare",
+    "Country":"Ireland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"53.385066, -6.601791",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"In Maynooth University we have two important locations for GeoForAll. The Department of Computer Science carries out a wide range of research into VGI, Citizen Science, Geo Data Quality while the National Center for Geocomputation carries out research into geostatistics, survey, LiDar, population studies, etc.",
+    "Contact names":"Dr Peter Mooney",
+    "Contact emails":"peter.mooney@mu.ie"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -34.6036844,-58.3815591 ]
+    },
+    "properties": {
+    "FIELD1":134,
+    "Laboratory name and institution":"Nodo IDE del Instituto de Geografía",
+    "City":"Buenos Aires",
+    "Country":"Argentina",
+    "Continent":"South America",
+    "Coordinates (longitude, latitude)":"-34.6036844, -58.3815591",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"",
+    "Contact names":"Nora Claudia Lucioni",
+    "Contact emails":"noralu@filo.uba.ar"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  { }
+    },
+    "properties": {
+    "FIELD1":135,
+    "Laboratory name and institution":"Suresh Gyan Vihar University",
+    "City":"Jaipur",
+    "Country":"India",
+    "Continent":"Asia",
+    "Coordinates (longitude, latitude)":"26.8090, 75.8613",
+    "Application received / Announced":"",
+    "Notes (projects, collaborations, etc)":"These courses aim to develop both a solid theoretical understanding and a comprehensive practical introduction to the use of Geoinformatics in the day-today life as well as in the sustainable development of the society and the environment.",
+    "Contact names":"Dr Shruti Kanga",
+    "Contact emails":"shruti.kanga@mygyanvihar.com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 8.528522,47.370273 ]
+    },
+    "properties": {
+    "FIELD1":143,
+    "Laboratory name and institution":"Sourcepole",
+    "City":"Zurich",
+    "Country":"Switzerland",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"8.528522,47.370273",
+    "Application received / Announced":"2015-07-03",
+    "Notes (projects, collaborations, etc)":"Partnership with ETH Zurich",
+    "Contact names":"Pirmin Kalberer",
+    "Contact emails":"info at sourcepole dot com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 11.15382,43.0739 ]
+    },
+    "properties": {
+    "FIELD1":144,
+    "Laboratory name and institution":"Attivarti.org",
+    "City":"Torniella",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"11.15382,43.07390",
+    "Application received / Announced":"2015-07-12",
+    "Notes (projects, collaborations, etc)":"incubation phase (various links to OSGEO Community and to other geospatial players in Italy and internationally). Focus on VGI and participatory methods.",
+    "Contact names":"Andrea Giacomelli",
+    "Contact emails":"mappare at attivarti dot org"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.05561,46.48147 ]
+    },
+    "properties": {
+    "FIELD1":145,
+    "Laboratory name and institution":"HUNAGI",
+    "City":"Budapest",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"19.05561,46.48147",
+    "Application received / Announced":"2015-08-12",
+    "Notes (projects, collaborations, etc)":"Free data, geodatabases, resource analysis, geospatial modelling.",
+    "Contact names":"György Szabó",
+    "Contact emails":"szabo dot gyorgy at hunagi dot hu"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 15.807793,40.64547 ]
+    },
+    "properties": {
+    "FIELD1":146,
+    "Laboratory name and institution":"Wat-TUBE (spin-off University of Basilicata)",
+    "City":"Potenza",
+    "Country":"Italy",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"15.807793,40.645470",
+    "Application received / Announced":"2015-09-07",
+    "Notes (projects, collaborations, etc)":"Open-source and free (FOSS) software development in the field of flood and landslide risk, flood prediction and analysis, water resources management, hydrology.",
+    "Contact names":"Raffaele Albano",
+    "Contact emails":"raffaele dot albano85 at gmail dot com"
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 19.1172618,47.4691018 ]
+    },
+    "properties": {
+    "FIELD1":147,
+    "Laboratory name and institution":"Indikatrix.org",
+    "City":"Budapest",
+    "Country":"Hungary",
+    "Continent":"Europe",
+    "Coordinates (longitude, latitude)":"19.1172618, 47.4691018",
+    "Application received / Announced":"2019-06-26",
+    "Notes (projects, collaborations, etc)":"Open data usage (OSM, SRTM, Corine Land Cover, etc.), geospatial analysis, modelling and programming (QGIS, PyQGIS, GRASS, PostgreSQL, PostGIS, Leaflet)",
+    "Contact names":"Dr. Ervin Wirth",
+    "Contact emails":"wirth dot ervin at mailbox dot org"
+    }
+  }
+]
+
+
+
+		var mymap = L.map('mapid').setView([15, 0], 3);
+		L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>'
+		}).addTo(mymap);
+		
+		for (const element of geojson) {
+			orgname = element["properties"]["Laboratory name and institution"]
+			gJO = L.geoJSON(element)
+			gJO.bindPopup(orgname);
+			gJO.addTo(mymap);
+			}
+	</script>
+  </body>
+</html>
