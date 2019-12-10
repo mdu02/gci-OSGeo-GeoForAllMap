@@ -7,6 +7,6 @@ Python: I used requests to download the data from [the OSGeo wiki](https://wiki.
 
 I used a [tool online](http://www.convertcsv.com/csv-to-geojson.htm) to convert the data to the required geoJSON used by leaflet, then removed the wrapping around the array of geographical features within. This stripped file is available in the repo.
 
-HTML: I wrote a very basic HTML webpage, with just one div and no CSS. It uses the leaflet and jQuery for its content.
+HTML: I wrote a very basic HTML webpage, with just one div and no CSS. It uses the leaflet and jQuery libraries for its dynamic content.
 
 JS: Used jQuery to GET the .json file from the repo. Used the coordinates and organization name attributes in the .json file to create the map, with the Leaflet library.
